@@ -25,11 +25,11 @@ public class PublishingCompany implements Subject {
             
             Date currentDate = Calendar.getInstance().getTime();
             
-            if (currentDate.getTime() - startDate.getTime() > 5000) {//86400){
+            if (currentDate.getTime() - startDate.getTime() > 86400){
                 notifyObservers();
                 startDate = currentDate;
             } 
-            Thread.sleep(1000);
+            Thread.sleep(10000);
         }
         System.out.println("Falimos");
     }
